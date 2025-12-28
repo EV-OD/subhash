@@ -27,7 +27,7 @@ export default function AboutPage() {
           
           {/* Profile Summary */}
           <div className="grid md:grid-cols-[400px_1fr] gap-8 items-start">
-            <div className="relative aspect-[3/4] md:aspect-auto md:h-full bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 shadow-sm min-h-[300px]">
+            <div className="relative aspect-[3/4] md:aspect-auto md:h-full bg-muted rounded-2xl overflow-hidden border border-border shadow-sm min-h-[300px]">
                 <Image
                   src="/images/author/profile.png"
                   alt="Advocate Subhash Lamichhane"
@@ -44,18 +44,18 @@ export default function AboutPage() {
                     </div>
                     <h2 className="text-2xl font-bold tracking-tight">Bio</h2>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-text-description leading-relaxed">
                   {cvData.profile}
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 pt-4">
-                    <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <div className="p-4 bg-muted/50 rounded-lg border border-border">
                         <div className="text-2xl font-bold text-primary">5+</div>
-                        <div className="text-sm text-muted-foreground">Years of Academic Excellence</div>
+                        <div className="text-sm text-text-description">Years of Academic Excellence</div>
                     </div>
-                    <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <div className="p-4 bg-muted/50 rounded-lg border border-border">
                         <div className="text-2xl font-bold text-primary">Top 10</div>
-                        <div className="text-sm text-muted-foreground">Bar Council Rank</div>
+                        <div className="text-sm text-text-description">Bar Council Rank</div>
                     </div>
                 </div>
             </div>
@@ -71,25 +71,25 @@ export default function AboutPage() {
                 </div>
                 <h2 className="text-2xl font-bold tracking-tight">Education</h2>
             </div>
-            <div className="relative border-l-2 border-slate-200 ml-3 md:ml-6 space-y-10 pb-2">
+            <div className="relative border-l-2 border-border ml-3 md:ml-6 space-y-10 pb-2">
               {cvData.education.map((edu, index) => (
                 <div key={index} className="relative pl-8 md:pl-12">
                   {/* Timeline Dot */}
-                  <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 border-white bg-primary shadow-sm ring-4 ring-slate-50" />
+                  <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 border-background bg-primary shadow-sm ring-4 ring-background" />
                   
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                    <h3 className="text-xl font-bold font-serif text-slate-900">{edu.degree}</h3>
+                    <h3 className="text-xl font-bold font-serif text-text-heading">{edu.degree}</h3>
                     <Badge variant="secondary" className="w-fit font-mono text-xs">{edu.year}</Badge>
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-slate-700 font-medium">
-                        <MapPin className="h-4 w-4 text-slate-400" />
+                    <div className="flex items-center gap-2 text-text-description font-medium">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
                         <span>{edu.institution}</span>
                     </div>
                     {edu.university && (
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Award className="h-4 w-4 text-slate-400" />
+                        <div className="flex items-center gap-2 text-sm text-text-description">
+                            <Award className="h-4 w-4 text-muted-foreground" />
                             <span>{edu.university}</span>
                         </div>
                     )}

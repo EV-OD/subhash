@@ -14,7 +14,7 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-2">
               <span className="font-bold text-lg text-primary">{SITE_NAME}</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-text-description">
              {companyInfo.footerTagline}
             </p>
           </div>
@@ -24,7 +24,7 @@ export function Footer() {
               <ul className="mt-4 space-y-2">
                 {navLinks.map((link) => (
                   <li key={`${link.href}-${link.label}`}>
-                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground">
+                    <Link href={link.href} className="text-sm text-text-description hover:text-text-heading">
                       {link.label}
                     </Link>
                   </li>
@@ -33,15 +33,15 @@ export function Footer() {
             </div>
             <div>
               <h3 className="font-headline text-sm font-semibold tracking-wider uppercase">Contact</h3>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <ul className="mt-4 space-y-2 text-sm text-text-description">
                 <li>{companyInfo.address}</li>
                 <li>
-                  <a href={`mailto:${companyInfo.email}`} className="hover:text-foreground">
+                  <a href={`mailto:${companyInfo.email}`} className="hover:text-text-heading">
                     {companyInfo.email}
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${companyInfo.phone}`} className="hover:text-foreground">
+                  <a href={`tel:${companyInfo.phone}`} className="hover:text-text-heading">
                     {companyInfo.phone}
                   </a>
                 </li>
@@ -53,7 +53,7 @@ export function Footer() {
                 {socialLinks.map((social) => (
                   <Button asChild key={social.name} variant="ghost" size="icon">
                     <a href={social.href} aria-label={social.name}>
-                      <social.icon className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                      <social.icon className="h-5 w-5 text-text-description hover:text-text-heading" />
                     </a>
                   </Button>
                 ))}
@@ -61,7 +61,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-8 border-t pt-8 text-center text-sm text-text-description">
           <p>&copy; {year} {SITE_NAME}. All Rights Reserved.</p>
         </div>
       </div>

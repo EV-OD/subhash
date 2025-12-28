@@ -36,11 +36,11 @@ export function PageHeader({ tag, title, subtitle, actions, children, isCentered
                     )}>
                         {tag}
                     </p>
-                    <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
+                    <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-text-heading">
                         {restOfTitle} <span className="text-primary">{lastWord}</span>
                     </h1>
                     <p className={cn(
-                        "max-w-[600px] text-muted-foreground md:text-xl",
+                        "max-w-[600px] text-text-subheading md:text-xl",
                         isCentered ? "mx-auto" : "mx-auto lg:mx-0"
                     )}>
                         {subtitle}

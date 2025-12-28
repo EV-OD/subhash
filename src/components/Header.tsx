@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, Scale } from 'lucide-react';
 import { navLinks, SITE_NAME } from '@/lib/constants';
 import { Button } from './ui/button';
@@ -10,6 +11,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui
 import { cn } from '@/lib/utils';
 
 export function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -27,6 +29,13 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
+
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
@@ -41,7 +50,12 @@ export function Header() {
               <Link
                 key={`${link.href}-${link.label}`}
                 href={link.href}
-                className="transition-colors hover:text-primary"
+                className={cn(
+                  "transition-colors hover:text-primary relative",
+                  isActive(link.href) 
+                    ? "text-primary font-semibold after:absolute after:bottom-[-20px] after:left-0 after:right-0 after:h-0.5 after:bg-primary" 
+                    : "text-foreground"
+                )}
               >
                 {link.label}
               </Link>
@@ -73,7 +87,10 @@ export function Header() {
                   <Link
                     key={`${link.href}-${link.label}-mobile`}
                     href={link.href}
-                    className="text-lg font-medium transition-colors hover:text-primary"
+                    className={cn(
+                      "text-lg font-medium transition-colors hover:text-primary",
+                      isActive(link.href) ? "text-primary font-bold" : "text-foreground"
+                    )}
                     onClick={() => setMenuOpen(false)}
                   >
                     {link.label}

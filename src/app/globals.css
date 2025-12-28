@@ -17,7 +17,7 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215.4 16.3% 35%;
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
@@ -39,6 +39,12 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Standard Text Colors */
+    --text-heading: 222.2 84% 4.9%;
+    --text-subheading: 217 19% 27%;
+    --text-description: 215.4 16.3% 35%;
+    --text-button: 210 40% 98%;
   }
 
   .dark {
@@ -53,7 +59,7 @@
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted-foreground: 215 20.2% 55%;
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
@@ -74,6 +80,12 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Standard Text Colors Dark Mode */
+    --text-heading: 210 40% 98%;
+    --text-subheading: 215 20.2% 75%;
+    --text-description: 215 20.2% 55%;
+    --text-button: 222.2 47.4% 11.2%;
   }
 }
 
@@ -92,7 +104,7 @@
   h4,
   h5,
   h6 {
-    @apply font-headline;
+    @apply font-headline text-text-heading;
   }
 }
 
