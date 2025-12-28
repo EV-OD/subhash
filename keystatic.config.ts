@@ -16,6 +16,7 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
+        author: fields.text({ label: 'Author', defaultValue: 'Subhash Lamichhane' }),
         excerpt: fields.text({ label: 'Excerpt', multiline: true }),
         date: fields.date({ label: 'Publish Date', defaultValue: new Date().toISOString().split('T')[0] }),
         image: fields.image({ 
@@ -35,27 +36,17 @@ export default config({
       label: 'Research Papers',
       slugField: 'title',
       path: 'src/content/research-papers/*',
-      format: { contentField: 'content' },
+      format: 'yaml',
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
+        author: fields.text({ label: 'Author', defaultValue: 'Subhash Lamichhane' }),
         excerpt: fields.text({ label: 'Abstract/Excerpt', multiline: true }),
         date: fields.date({ label: 'Publish Date', defaultValue: new Date().toISOString().split('T')[0] }),
-        image: fields.image({ 
-            label: 'Hero Image',
-            directory: 'public/images/research-papers',
-            publicPath: '/images/research-papers/'
-        }),
         pdf: fields.file({
           label: 'PDF Document',
           directory: 'public/files/research-papers',
           publicPath: '/files/research-papers/',
         }),
-        content: fields.markdoc({ label: 'Content', options:{
-          image:{
-            directory: 'public/images/research-papers/content',
-            publicPath: '/images/research-papers/content/',
-          }
-        } }),
       },
     }),
     academia: collection({
@@ -65,6 +56,7 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
+        author: fields.text({ label: 'Author', defaultValue: 'Subhash Lamichhane' }),
         excerpt: fields.text({ label: 'Excerpt', multiline: true }),
         date: fields.date({ label: 'Publish Date', defaultValue: new Date().toISOString().split('T')[0] }),
         image: fields.image({ 
@@ -92,6 +84,7 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Case Title' } }),
+        author: fields.text({ label: 'Author', defaultValue: 'Subhash Lamichhane' }),
         excerpt: fields.text({ label: 'Summary', multiline: true }),
         date: fields.date({ label: 'Judgment Date', defaultValue: new Date().toISOString().split('T')[0] }),
         image: fields.image({ 
@@ -114,6 +107,7 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
+        author: fields.text({ label: 'Author', defaultValue: 'Subhash Lamichhane' }),
         excerpt: fields.text({ label: 'Excerpt', multiline: true }),
         date: fields.date({ label: 'Publish Date', defaultValue: new Date().toISOString().split('T')[0] }),
         image: fields.image({ 

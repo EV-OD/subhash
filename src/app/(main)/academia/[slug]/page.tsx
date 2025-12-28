@@ -7,7 +7,7 @@ import keystaticConfig from '../../../../../keystatic.config';
 import Markdoc from '@markdoc/markdoc';
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
+import { Download, User } from 'lucide-react';
 import { EmbedPdf } from '@/components/EmbedPdf';
 
 type Props = {
@@ -65,14 +65,20 @@ export default async function AcademiaPostPage({ params }: Props) {
           <h1 className="font-headline text-3xl md:text-5xl font-bold tracking-tighter mb-4">
             {post.title}
           </h1>
-          <p className="text-muted-foreground mb-6">
-            Posted on{' '}
-            {post.date && new Date(post.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })}
-          </p>
+          <div className="flex items-center justify-center gap-4 text-muted-foreground mb-6">
+             <div className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                <span>{post.author}</span>
+             </div>
+             <span>•</span>
+             <p>
+                {post.date && new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+             </p>
+          </div>
           {post.pdf && (
             <Button asChild variant="outline" className="gap-2">
               <a href={post.pdf} download target="_blank" rel="noopener noreferrer">
