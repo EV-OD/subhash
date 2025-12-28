@@ -16,15 +16,11 @@ export const metadata: Metadata = {
 const reader = createReader(process.cwd(), keystaticConfig);
 
 export default async function ResearchPapersPage() {
-  const allPosts = await reader.collections.posts.all({ resolveLinkedFiles: true });
-  
-  const posts = allPosts
-    .filter(post => post.entry.category === 'research-paper')
-    .sort((a, b) => {
-      const dateA = a.entry.date ? new Date(a.entry.date).getTime() : 0;
-      const dateB = b.entry.date ? new Date(b.entry.date).getTime() : 0;
-      return dateB - dateA;
-    });
+  const posts = (await reader.collections.researchPapers.all({ resolveLinkedFiles: true })).sort((a, b) => {
+    const dateA = a.entry.date ? new Date(a.entry.date).getTime() : 0;
+    const dateB = b.entry.date ? new Date(b.entry.date).getTime() : 0;
+    return dateB - dateA;
+  });
 
   return (
     <>
@@ -40,7 +36,7 @@ export default async function ResearchPapersPage() {
               {posts.map((post) => (
                 <Card key={post.slug} className="flex flex-col">
                    {post.entry.image && (
-                    <Link href={`/blog/${post.slug}`} className="hidden lg:block relative w-full aspect-video">
+                    <Link href={`/research-papers/${post.slug}`} className="hidden lg:block relative w-full aspect-video">
                       <Image
                         src={post.entry.image}
                         alt={`Featured image for ${post.entry.title}`}
@@ -52,7 +48,7 @@ export default async function ResearchPapersPage() {
                   <div className="flex flex-col flex-1">
                     <CardHeader>
                       <CardTitle className="font-headline text-lg lg:text-2xl leading-tight">
-                        <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors line-clamp-2">
+                        <Link href={`/research-papers/${post.slug}`} className="hover:text-primary transition-colors line-clamp-2">
                           {post.entry.title}
                         </Link>
                       </CardTitle>
@@ -70,7 +66,7 @@ export default async function ResearchPapersPage() {
                       </p>
                       <div className="flex gap-4">
                         <Button asChild variant="link" className="px-0">
-                          <Link href={`/blog/${post.slug}`}>
+                          <Link href={`/research-papers/${post.slug}`}>
                             Read Paper <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>

@@ -14,11 +14,11 @@ type Props = {
 const reader = createReader(process.cwd(), keystaticConfig);
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await reader.collections.posts.read(params.slug);
+  const post = await reader.collections.caseLaws.read(params.slug);
 
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: 'Case Law Not Found',
     };
   }
 
@@ -29,14 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const slugs = await reader.collections.posts.list();
+  const slugs = await reader.collections.caseLaws.list();
   return slugs.map((slug) => ({
     slug,
   }));
 }
 
-export default async function PostPage({ params }: Props) {
-  const post = await reader.collections.posts.read(params.slug, { resolveLinkedFiles: true });
+export default async function CaseLawPage({ params }: Props) {
+  const post = await reader.collections.caseLaws.read(params.slug, { resolveLinkedFiles: true });
 
   if (!post) {
     notFound();
@@ -63,7 +63,7 @@ export default async function PostPage({ params }: Props) {
             {post.title}
           </h1>
           <p className="text-muted-foreground">
-            Posted on{' '}
+            Judgment Date:{' '}
             {post.date && new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',

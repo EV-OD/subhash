@@ -10,7 +10,20 @@ import Image from 'next/image';
 
 export default async function Home() {
   const reader = createReader(process.cwd(), keystaticConfig);
-  const posts = (await reader.collections.posts.all({ resolveLinkedFiles: true })).sort((a, b) => {
+  
+  // Fetch latest items from all collections
+  const articles = await reader.collections.articles.all({ resolveLinkedFiles: true });
+  const researchPapers = await reader.collections.researchPapers.all({ resolveLinkedFiles: true });
+  const academia = await reader.collections.academia.all({ resolveLinkedFiles: true });
+  const caseLaws = await reader.collections.caseLaws.all({ resolveLinkedFiles: true });
+  
+  // Combine and sort by date
+  const allContent = [
+    ...articles.map(item => ({ ...item, type: 'articles' })),
+    ...researchPapers.map(item => ({ ...item, type: 'research-papers' })),
+    ...academia.map(item => ({ ...item, type: 'academia' })),
+    ...caseLaws.map(item => ({ ...item, type: 'case-laws' }))
+  ].sort((a, b) => {
     const dateA = a.entry.date ? new Date(a.entry.date).getTime() : 0;
     const dateB = b.entry.date ? new Date(b.entry.date).getTime() : 0;
     return dateB - dateA;
@@ -131,8 +144,8 @@ export default async function Home() {
           </div>
 
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group cursor-pointer space-y-3 block">
+            {allContent.map((post) => (
+              <Link key={post.slug} href={`/${post.type}/${post.slug}`} className="group cursor-pointer space-y-3 block">
                 <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden relative">
                    {post.entry.image ? (
                       <Image
@@ -158,7 +171,7 @@ export default async function Home() {
                     {post.entry.excerpt}
                   </p>
                   <div className="pt-2 text-sm font-medium underline decoration-slate-300 underline-offset-4 group-hover:decoration-primary transition-all">
-                    Read Article
+                    Read More
                   </div>
                 </div>
               </Link>

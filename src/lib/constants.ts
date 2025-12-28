@@ -9,6 +9,7 @@ export const navLinks = [
   { href: '/articles', label: 'Articles' },
   { href: '/research-papers', label: 'Research Papers' },
   { href: '/academia', label: 'Academia' },
+  { href: '/case-laws', label: 'Case Laws' },
 ];
 
 export const companyInfo = {
