@@ -6,26 +6,14 @@ import { navLinks } from '@/lib/constants';
 const reader = createReader(process.cwd(), keystaticConfig);
 const URL = "https://www.harmonytouch.com";
 
-function generateSiteMap(posts: { slug: string }[], pages: { href: string }[]) {
+function generateSiteMap(urls: string[]) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!-- Static Pages -->
-     ${pages
-       .map(({ href }) => {
+     ${urls
+       .map((url) => {
          return `
            <url>
-               <loc>${`${URL}${href}`}</loc>
-           </url>
-         `;
-       })
-       .join('')}
-       
-     <!-- Blog Posts -->
-     ${posts
-       .map(({ slug }) => {
-         return `
-           <url>
-               <loc>${`${URL}/blog/${slug}`}</loc>
+               <loc>${url}</loc>
            </url>
          `;
        })
@@ -35,13 +23,30 @@ function generateSiteMap(posts: { slug: string }[], pages: { href: string }[]) {
 }
 
 export async function GET() {
-  const posts = await reader.collections.posts.list();
-  const allPosts = posts.map(slug => ({ slug }));
-  
-  // Exclude the home page from navLinks as it's added separately, if needed
-  const pages = navLinks;
+  // Fetch all slugs from different collections
+  const articleSlugs = await reader.collections.articles.list();
+  const researchPaperSlugs = await reader.collections.researchPapers.list();
+  const academiaSlugs = await reader.collections.academia.list();
+  const caseLawSlugs = await reader.collections.caseLaws.list();
 
-  const body = generateSiteMap(allPosts, pages);
+  // Generate URLs for static pages
+  const staticUrls = navLinks.map((link) => `${URL}${link.href === '/' ? '' : link.href}`);
+
+  // Generate URLs for dynamic content
+  const articleUrls = articleSlugs.map((slug) => `${URL}/articles/${slug}`);
+  const researchPaperUrls = researchPaperSlugs.map((slug) => `${URL}/research-papers/${slug}`);
+  const academiaUrls = academiaSlugs.map((slug) => `${URL}/academia/${slug}`);
+  const caseLawUrls = caseLawSlugs.map((slug) => `${URL}/case-laws/${slug}`);
+
+  const allUrls = [
+    ...staticUrls,
+    ...articleUrls,
+    ...researchPaperUrls,
+    ...academiaUrls,
+    ...caseLawUrls,
+  ];
+
+  const body = generateSiteMap(allUrls);
 
   return new Response(body, {
     status: 200,
