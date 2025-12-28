@@ -8,6 +8,7 @@ import Markdoc from '@markdoc/markdoc';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
+import { EmbedPdf } from '@/components/EmbedPdf';
 
 type Props = {
   params: { slug: string };
@@ -96,6 +97,13 @@ export default async function AcademiaPostPage({ params }: Props) {
         <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-headline prose-p:text-foreground/80 prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-lg">
            {renderable ? Markdoc.renderers.react(renderable, React) : null}
         </div>
+
+        {post.pdf && (
+            <div className="mt-12">
+                <h2 className="text-2xl font-bold mb-4 font-headline">Document Viewer</h2>
+                <EmbedPdf url={post.pdf} title={post.title} />
+            </div>
+        )}
       </div>
     </article>
   );
