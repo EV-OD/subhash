@@ -1,0 +1,424 @@
+
+{
+  "aboutPage": {
+    "hero": [
+      {
+        "name": "about-hero-grid-image-1",
+        "imageSize": "300x225",
+        "whatImageShouldContain": "A diverse team of professional caregivers in coordinated green uniforms, standing together in a home-like care facility with warm smiles.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/about us/Group of professional caregivers in coordinated green uniforms, standing together in a home-like care facility, diverse team, warm smiles.jpg"
+      },
+      {
+        "name": "about-hero-grid-image-2",
+        "imageSize": "300x450",
+        "whatImageShouldContain": "A professional portrait of the founder, Briah Robinson.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/Briah Robinson.jpg"
+      },
+      {
+        "name": "about-hero-grid-image-3",
+        "imageSize": "300x225",
+        "whatImageShouldContain": "Two caregivers reviewing a care plan document on a tablet in a home office setting.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/about us/Two caregivers reviewing a care plan document on a tablet in a home office setting, green-themed folders and decor visible, collaborative atmosphere.jpg"
+      }
+    ],
+    "founderStory": [
+      {
+        "name": "about-founderstory-avatar-image-1",
+        "imageSize": "60x60",
+        "whatImageShouldContain": "A professional portrait of the founder, Briah Robinson.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/Briah Robinson.jpg"
+      }
+    ],
+    "team": [
+      {
+        "name": "about-team-member-image-1",
+        "imageSize": "400x500",
+        "whatImageShouldContain": "A professional portrait of the founder, Briah Robinson.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/Briah Robinson.jpg"
+      },
+      {
+        "name": "about-team-member-image-2",
+        "imageSize": "400x500",
+        "whatImageShouldContain": "A portrait of Jane Doe, the Head of Care Operations. A smiling female caregiver with a name badge.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/about us/Portrait of a smiling female caregiver with a green name badge, soft-focus background of home interior with leafy plants, trust and warmth.jpg"
+      },
+      {
+        "name": "about-team-member-image-3",
+        "imageSize": "400x500",
+        "whatImageShouldContain": "A portrait of John Smith, the Client Relations Manager. Two caregivers collaborating over a tablet.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/about us/Two caregivers reviewing a care plan document on a tablet in a home office setting, green-themed folders and decor visible, collaborative atmosphere.jpg"
+      }
+    ]
+  },
+  "approachPage": {
+    "hero": [
+      {
+        "name": "approach-hero-grid-image-1",
+        "imageSize": "300x450",
+        "whatImageShouldContain": "A care planning session with two caregivers reviewing a plan on a tablet.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/about us/Two caregivers reviewing a care plan document on a tablet in a home office setting, green-themed folders and decor visible, collaborative atmosphere.jpg"
+      },
+      {
+        "name": "approach-hero-grid-image-2",
+        "imageSize": "300x225",
+        "whatImageShouldContain": "An elderly woman meditating with a caregiver in a garden.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/more/Elderly woman meditating with caregiver in a garden, green yoga mats, calm mood, wellness-focused theme.jpg"
+      },
+      {
+        "name": "approach-hero-grid-image-3",
+        "imageSize": "300x225",
+        "whatImageShouldContain": "An elderly man playing cards with his caregiver.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/services section/Elderly man and caregiver playing cards at a wooden table, potted plants in the background, smiles and relaxed expressions, peaceful ambiance.jpg"
+      }
+    ],
+    "principles": [
+      {
+        "name": "approach-principles-card-image-1",
+        "imageSize": "400x300",
+        "whatImageShouldContain": "Caregiver and client reviewing a personalized care plan together.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/hero section ( above-the-fold)/Elderly person smiling at home with caregiver.jpg"
+      },
+      {
+        "name": "approach-principles-card-image-2",
+        "imageSize": "400x300",
+        "whatImageShouldContain": "A happy senior couple sharing a joyful moment at home.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/hero section ( above-the-fold)/Happy senior couple in a cozy home, plants visible.jpg"
+      },
+      {
+        "name": "approach-principles-card-image-3",
+        "imageSize": "400x300",
+        "whatImageShouldContain": "A caregiver assisting a senior with gentle exercises in a serene garden.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/hero section ( above-the-fold)/Nurse assisting patient in a green garden.jpg"
+      }
+    ]
+  },
+  "careersPage": {
+    "hero": [
+      {
+        "name": "careers-hero-main-image-1",
+        "imageSize": "1200x384",
+        "whatImageShouldContain": "A team of professional caregivers, diverse and smiling, in a home-care facility.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/about us/Group of professional caregivers in coordinated green uniforms, standing together in a home-like care facility, diverse team, warm smiles.jpg"
+      }
+    ]
+  },
+  "homePage": {
+    "heroSection": [
+      {
+        "name": "home-hero-background-image-1",
+        "imageSize": "1920x1080",
+        "whatImageShouldContain": "A compassionate caregiver holding hands with an elderly client, close-up shot focusing on the hands.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/hero section ( above-the-fold)/hero_section_img.jpg"
+      }
+    ],
+    "reviews": [
+        {
+            "name": "home-reviews-avatar-image-1",
+            "imageSize": "40x40",
+            "whatImageShouldContain": "An elderly woman hugging her caregiver with a heartfelt smile.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/testimonial/Elderly woman hugging caregiver with heartfelt smile, framed photo of her family behind, indoor plant and green curtains, warm and trusting moment.jpg"
+        },
+        {
+            "name": "home-reviews-avatar-image-2",
+            "imageSize": "40x40",
+            "whatImageShouldContain": "An elderly man giving a thumbs up while sitting with his caregiver on a bench.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/testimonial/Elderly man giving a thumbs up while sitting with caregiver on a bench, trees and grass in background, warm green tones.jpg"
+        },
+        {
+            "name": "home-reviews-avatar-image-3",
+            "imageSize": "40x40",
+            "whatImageShouldContain": "Portrait of a smiling female caregiver with a green name badge.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/about us/Portrait of a smiling female caregiver with a green name badge, soft-focus background of home interior with leafy plants, trust and warmth.jpg"
+        }
+    ],
+    "approach": [
+      {
+        "name": "home-approach-gallery-image-1",
+        "imageSize": "600x400",
+        "whatImageShouldContain": "An elderly person smiling at home with their caregiver.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/hero section ( above-the-fold)/Elderly person smiling at home with caregiver.jpg"
+      },
+      {
+        "name": "home-approach-gallery-image-2",
+        "imageSize": "600x400",
+        "whatImageShouldContain": "A happy senior couple in a cozy home with plants visible.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/hero section ( above-the-fold)/Happy senior couple in a cozy home, plants visible.jpg"
+      },
+      {
+        "name": "home-approach-gallery-image-3",
+        "imageSize": "600x400",
+        "whatImageShouldContain": "A caregiver assisting a senior with gentle exercises in a green garden.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/hero section ( above-the-fold)/Nurse assisting patient in a green garden.jpg"
+      }
+    ],
+    "services": [
+        {
+            "name": "home-services-carousel-image-1",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "Caregiver placing a blanket over an elderly woman on a recliner.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/more/Caregiver gently placing a blanket over an elderly woman resting on a recliner, peaceful room with green plants and soft lighting, comfort and care depicted.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-2",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "A friendly caregiver assisting a senior with light mobility exercises in a sunlit garden.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/hero section ( above-the-fold)/Nurse assisting patient in a green garden.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-3",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "A diverse group of professional caregivers smiling warmly.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/about us/Group of professional caregivers in coordinated green uniforms, standing together in a home-like care facility, diverse team, warm smiles.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-4",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "Elderly woman and caregiver practicing gentle meditation in a tranquil garden.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/more/Elderly woman meditating with caregiver in a garden, green yoga mats, calm mood, wellness-focused theme.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-5",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "A caregiver helping an elderly woman with personal grooming in a comfortable home setting.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/service_card/personal_Care.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-6",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "A young caregiver bringing groceries to an elderly client's doorstep in a friendly neighborhood.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/more/Young caregiver bringing groceries to an elderly client's doorstep, rowhomes typical of Philadelphia, green shopping bag, helpful atmosphere.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-7",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "A caregiver holding hands with an elderly client, showing support and connection.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/hero section ( above-the-fold)/Caregiver holding hands with an elderly client.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-8",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "An elderly woman embracing her caregiver, showing a strong, trusting bond.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/testimonial/Elderly woman hugging caregiver with heartfelt smile, framed photo of her family behind, indoor plant and green curtains, warm and trusting moment.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-9",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "A friendly caregiver preparing a healthy meal with an elderly man in a bright kitchen.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/services section/Female caregiver preparing a healthy meal for an elderly man in a kitchen with green tiles and wood accents, smiling, utensils and food visible, wellness vibe.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-10",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "A caregiver helping to organize daily medications in a non-clinical, organized manner.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/blog/Caregiver arranging medication reminders on a green-labeled board, clear pill boxes, clock on wall, safe and professional setting.jpg"
+        },
+        {
+            "name": "home-services-carousel-image-11",
+            "imageSize": "600x750",
+            "whatImageShouldContain": "An elderly woman being assisted into a car by her caregiver for an outing.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/services section/Elderly woman being helped into a car by caregiver, car door open, vehicle has green logo or branding, suburban neighborhood background.jpg"
+        }
+    ],
+    "testimonials": [
+      {
+        "name": "home-testimonials-avatar-image-1",
+        "imageSize": "48x48",
+        "whatImageShouldContain": "An elderly woman hugging her caregiver with a heartfelt smile.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/testimonial/Elderly woman hugging caregiver with heartfelt smile, framed photo of her family behind, indoor plant and green curtains, warm and trusting moment.jpg"
+      },
+      {
+        "name": "home-testimonials-avatar-image-2",
+        "imageSize": "48x48",
+        "whatImageShouldContain": "An elderly man giving a thumbs up while sitting with his caregiver on a park bench.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/testimonial/Elderly man giving a thumbs up while sitting with caregiver on a bench, trees and grass in background, warm green tones.jpg"
+      },
+      {
+        "name": "home-testimonials-avatar-image-3",
+        "imageSize": "48x48",
+        "whatImageShouldContain": "A senior client giving a video testimonial from their comfortable living room.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/more/Senior client giving a video testimonial from a living room with green accents, smiling, caregiver filming with phone, natural light through window.jpg"
+      }
+    ],
+    "cta": [
+      {
+        "name": "home-cta-main-image-1",
+        "imageSize": "600x400",
+        "whatImageShouldContain": "A friendly staff member talking to a client on the phone in a bright, welcoming office.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/CTA/Caregiver talking to a client on the phone, notebook and green mug on desk, indoor plant in background, calm workspace with natural light.jpg"
+      }
+    ]
+  },
+  "schedulePage": {
+    "hero": [
+      {
+        "name": "schedule-hero-main-image-1",
+        "imageSize": "1200x384",
+        "whatImageShouldContain": "A care planner meeting with a senior couple at their home, having a friendly conversation.",
+        "imageType": "photorealistic",
+        "currentImageUsed": "src/assets/CTA/Care planner meeting a senior couple at home, documents on table, green branding elements visible, friendly and welcoming mood.jpg"
+      }
+    ]
+  },
+  "servicesPage": {
+    "allServices": [
+        {
+            "name": "services-card-private-duty-1",
+            "title": "Pediatric and Adult Private Duty Nursing",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A caregiver providing skilled, one-on-one attention to a client in a comfortable home environment.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/hero section ( above-the-fold)/Nurse assisting patient in a green garden.jpg"
+        },
+        {
+            "name": "services-card-private-duty-2",
+            "title": "Pediatric Day Health Care Centers",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A bright and cheerful day care setting where children receive care and engage in learning activities.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/about us/Group of professional caregivers in coordinated green uniforms, standing together in a home-like care facility, diverse team, warm smiles.jpg"
+        },
+        {
+            "name": "services-card-private-duty-3",
+            "title": "School Nursing",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A friendly caregiver in a school setting, ensuring the health and safety of students.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/about us/Two caregivers reviewing a care plan document on a tablet in a home office setting, green-themed folders and decor visible, collaborative atmosphere.jpg"
+        },
+        {
+            "name": "services-card-private-duty-4",
+            "title": "Pediatric Therapy",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A child engaged in a positive and gentle therapy session with a caregiver.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/more/Elderly woman meditating with caregiver in a garden, green yoga mats, calm mood, wellness-focused theme.jpg"
+        },
+        {
+            "name": "services-card-private-duty-5",
+            "title": "Personal Care and Companionship",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A caregiver assisting a senior with daily activities, sharing a smile and conversation.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/services section/Caregiver helping elderly woman brush her hair in a bedroom with green-themed bedsheets and natural sunlight, mirror reflection visible, soft moment.jpg"
+        },
+        {
+            "name": "services-card-private-duty-6",
+            "title": "Support Services",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A caregiver helping with errands like grocery shopping, demonstrating community support.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/more/Young caregiver bringing groceries to an elderly client's doorstep, rowhomes typical of Philadelphia, green shopping bag, helpful atmosphere.jpg"
+        },
+        {
+            "name": "services-card-home-health-1",
+            "title": "Home Health Care",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A caregiver providing professional health support within the client's own home.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/hero section ( above-the-fold)/Caregiver holding hands with an elderly client.jpg"
+        },
+        {
+            "name": "services-card-home-health-2",
+            "title": "Hospice Care",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A caregiver providing comfort and compassionate support to a client in a peaceful home setting.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/more/Caregiver gently placing a blanket over an elderly woman resting on a recliner, peaceful room with green plants and soft lighting, comfort and care depicted.jpg"
+        },
+        {
+            "name": "services-card-medical-1",
+            "title": "Enteral Nutrition",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A caregiver preparing a specialized meal with care and attention to dietary needs.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/services section/Female caregiver preparing a healthy meal for an elderly man in a kitchen with green tiles and wood accents, smiling, utensils and food visible, wellness vibe.jpg"
+        },
+        {
+            "name": "services-card-medical-2",
+            "title": "Medical Supplies",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "An organized and clean setup of home care supplies, ready for use.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/blog/Caregiver arranging medication reminders on a green-labeled board, clear pill boxes, clock on wall, safe and professional setting.jpg"
+        },
+        {
+            "name": "services-card-medical-3",
+            "title": "Respiratory Therapy",
+            "imageSize": "800x600",
+            "whatImageShouldContain": "A client and caregiver enjoying a light activity like playing cards, symbolizing improved quality of life.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "src/assets/services section/Elderly man and caregiver playing cards at a wooden table, potted plants in the background, smiles and relaxed expressions, peaceful ambiance.jpg"
+        }
+    ]
+  },
+  "layout": {
+    "header": [
+      {
+        "name": "layout-header-logo-image-1",
+        "imageSize": "40x40",
+        "whatImageShouldContain": "The Harmony Touch company logo.",
+        "imageType": "logo",
+        "currentImageUsed": "src/assets/logo.png"
+      }
+    ]
+  },
+  "blogPostPage": {
+    "post": [
+        {
+            "name": "blog-post-hero-image-1",
+            "imageSize": "1200x630",
+            "whatImageShouldContain": "A featured image relevant to the blog post's content.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "(dynamic from CMS)"
+        }
+    ]
+  },
+   "blogListPage": {
+    "post": [
+        {
+            "name": "blog-list-item-image-1",
+            "imageSize": "800x450",
+            "whatImageShouldContain": "A featured image for a blog post summary.",
+            "imageType": "photorealistic",
+            "currentImageUsed": "(dynamic from CMS)"
+        }
+    ]
+  }
+}
+

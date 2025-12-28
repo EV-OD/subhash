@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 212 95% 68%;
+    --chart-3: 216 92% 60%;
+    --chart-4: 210 98% 78%;
+    --chart-5: 212 97% 87%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-headline;
+  }
+}
+
+@layer components {
+  .btn-ripple {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-ripple::after {
+    content: '';
+    @apply absolute top-1/2 left-1/2 w-2 h-2 bg-white/50 opacity-0 rounded-full -translate-x-1/2 -translate-y-1/2;
+    transform-origin: 50% 50%;
+  }
+
+  .btn-ripple:active::after {
+    animation: ripple 0.75s ease-out;
+  }
+
+  .card-stack {
+    @apply relative;
+  }
+
+  .card-stack::before,
+  .card-stack::after {
+    content: '';
+    @apply absolute -top-2 h-full -z-10 rounded-[inherit] bg-accent/20 transition-transform duration-300;
+  }
+
+  .card-stack:hover::before {
+    transform: translateY(-8px) translateX(var(--tw-translate-x));
+  }
+
+  .card-stack:hover::after {
+    transform: translateY(-16px) translateX(var(--tw-translate-x));
+  }
+
+  .card-stack::before {
+    @apply bg-card border-border border;
+    transform: translateY(-4px) translateX(4px);
+  }
+
+  .card-stack::after {
+    @apply bg-card border-border border;
+    transform: translateY(-8px) translateX(8px);
+  }
+
+  .orbit-icon {
+    @apply absolute;
+    animation: orbit var(--orbit-duration) linear infinite;
+    animation-delay: var(--orbit-delay, 0s);
+  }
+
+  .connected-care-scroll [data-radix-scroll-area-viewport]>div {
+    display: block !important;
+  }
+
+  .connected-care-scroll>div>[data-radix-scroll-area-scrollbar] {
+    display: none;
+  }
+
+  .dotted-background {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dotted-background::before {
+    content: "";
+    pointer-events: none;
+    background-image: radial-gradient(circle at center, hsl(0deg 0% 100%) 1px, #c5c5c5c4 10px);
+    background-size: 20px 20px;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: radial-gradient(circle at left, #ff000057 0%, #00000000 60%);
+    mask-image: radial-gradient(circle at left, #ff000057 0%, #00000000 60%);
+  }
+
+  .d-center::before {
+    -webkit-mask-image: radial-gradient(circle at center, #ff000057 0%, #00000000 60%);
+    mask-image: radial-gradient(circle at center, #ff000057 0%, #00000000 60%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .dotted-background::before {
+      background-image: radial-gradient(circle at center, hsl(0deg 0% 100%) 1px, #c5c5c5c4 10px);
+
+      -webkit-mask-image: radial-gradient(circle at top, #ff000057 0%, #00000000 60%);
+      mask-image: radial-gradient(circle at top, #ff000057 0%, #00000000 60%);
+    }
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0) translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(45, 45) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse-slow {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 25s linear infinite;
+}
+
+
+body {
+  overflow-x: hidden;
+}

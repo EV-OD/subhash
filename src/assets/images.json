@@ -1,0 +1,53 @@
+{
+  "root": [
+    { "name": "Briah Robinson.jpg", "path": "Briah Robinson.jpg" },
+    { "name": "logo.png", "path": "logo.png" }
+  ],
+  "about us": [
+    { "name": "Group of professional caregivers in coordinated green uniforms, standing together in a home-like care facility, diverse team, warm smiles.jpg", "path": "about us/Group of professional caregivers in coordinated green uniforms, standing together in a home-like care facility, diverse team, warm smiles.jpg" },
+    { "name": "Portrait of a smiling female caregiver with a green name badge, soft-focus background of home interior with leafy plants, trust and warmth.jpg", "path": "about us/Portrait of a smiling female caregiver with a green name badge, soft-focus background of home interior with leafy plants, trust and warmth.jpg" },
+    { "name": "Two caregivers reviewing a care plan document on a tablet in a home office setting, green-themed folders and decor visible, collaborative atmosphere.jpg", "path": "about us/Two caregivers reviewing a care plan document on a tablet in a home office setting, green-themed folders and decor visible, collaborative atmosphere.jpg" }
+  ],
+  "blog": [
+    { "name": "Caregiver arranging medication reminders on a green-labeled board, clear pill boxes, clock on wall, safe and professional setting.jpg", "path": "blog/Caregiver arranging medication reminders on a green-labeled board, clear pill boxes, clock on wall, safe and professional setting.jpg" },
+    { "name": "Elderly woman learning to use a tablet with caregiver guiding her, smiling, plants on side table, bright natural light, calm educational moment.jpg", "path": "blog/Elderly woman learning to use a tablet with caregiver guiding her, smiling, plants on side table, bright natural light, calm educational moment.jpg" }
+  ],
+  "CTA": [
+    { "name": "Care planner meeting a senior couple at home, documents on table, green branding elements visible, friendly and welcoming mood.jpg", "path": "CTA/Care planner meeting a senior couple at home, documents on table, green branding elements visible, friendly and welcoming mood.jpg" },
+    { "name": "Caregiver talking to a client on the phone, notebook and green mug on desk, indoor plant in background, calm workspace with natural light.jpg", "path": "CTA/Caregiver talking to a client on the phone, notebook and green mug on desk, indoor plant in background, calm workspace with natural light.jpg" },
+    { "name": "Close-up of hands filling out a care request form on a laptop, green user interface on screen, indoor greenery visible in background.jpg", "path": "CTA/Close-up of hands filling out a care request form on a laptop, green user interface on screen, indoor greenery visible in background.jpg" }
+  ],
+  "hero section ( above-the-fold)": [
+    { "name": "Caregiver holding hands with an elderly client.jpg", "path": "hero section ( above-the-fold)/Caregiver holding hands with an elderly client.jpg" },
+    { "name": "Elderly person smiling at home with caregiver.jpg", "path": "hero section ( above-the-fold)/Elderly person smiling at home with caregiver.jpg" },
+    { "name": "Happy senior couple in a cozy home, plants visible.jpg", "path": "hero section ( above-the-fold)/Happy senior couple in a cozy home, plants visible.jpg" },
+    { "name": "Nurse assisting patient in a green garden.jpg", "path": "hero section ( above-the-fold)/Nurse assisting patient in a green garden.jpg" },
+    { "name": "hero_section_img.jpg", "path": "hero section ( above-the-fold)/hero_section_img.jpg" }
+  ],
+  "more": [
+    { "name": "Caregiver and elderly man attending an outdoor community event in Philadelphia, food stalls and local vibe, urban but friendly and green.jpg", "path": "more/Caregiver and elderly man attending an outdoor community event in Philadelphia, food stalls and local vibe, urban but friendly and green.jpg" },
+    { "name": "Caregiver gently placing a blanket over an elderly woman resting on a recliner, peaceful room with green plants and soft lighting, comfort and care depicted.jpg", "path": "more/Caregiver gently placing a blanket over an elderly woman resting on a recliner, peaceful room with green plants and soft lighting, comfort and care depicted.jpg" },
+    { "name": "Caregiver reading a thank-you letter aloud to a group of caregivers, bulletin board with pinned green notes in background, emotional team moment.jpg", "path": "more/Caregiver reading a thank-you letter aloud to a group of caregivers, bulletin board with pinned green notes in background, emotional team moment.jpg" },
+    { "name": "Elderly man watering plants with caregiver, both smiling, lush urban garden space in Philadelphia rowhouse backyard, wellness and companionship.jpg", "path": "more/Elderly man watering plants with caregiver, both smiling, lush urban garden space in Philadelphia rowhouse backyard, wellness and companionship.jpg" },
+    { "name": "Elderly woman meditating with caregiver in a garden, green yoga mats, calm mood, wellness-focused theme.jpg", "path": "more/Elderly woman meditating with caregiver in a garden, green yoga mats, calm mood, wellness-focused theme.jpg" },
+    { "name": "Senior client giving a video testimonial from a living room with green accents, smiling, caregiver filming with phone, natural light through window.jpg", "path": "more/Senior client giving a video testimonial from a living room with green accents, smiling, caregiver filming with phone, natural light through window.jpg" },
+    { "name": "Skyline of Philadelphia in the background, foreground with caregiver walking with elderly person through tree-lined neighborhood, green hues emphasized.jpg", "path": "more/Skyline of Philadelphia in the background, foreground with caregiver walking with elderly person through tree-lined neighborhood, green hues emphasized.jpg" },
+    { "name": "Wall of appreciation with printed testimonials, framed photos of caregivers and clients, green backdrop and decorative lights, office interior.jpg", "path": "more/Wall of appreciation with printed testimonials, framed photos of caregivers and clients, green backdrop and decorative lights, office interior.jpg" },
+    { "name": "Young caregiver bringing groceries to an elderly client's doorstep, rowhomes typical of Philadelphia, green shopping bag, helpful atmosphere.jpg", "path": "more/Young caregiver bringing groceries to an elderly client's doorstep, rowhomes typical of Philadelphia, green shopping bag, helpful atmosphere.jpg" }
+  ],
+  "services section": [
+    { "name": "Caregiver helping elderly woman brush her hair in a bedroom with green-themed bedsheets and natural sunlight, mirror reflection visible, soft moment.jpg", "path": "services section/Caregiver helping elderly woman brush her hair in a bedroom with green-themed bedsheets and natural sunlight, mirror reflection visible, soft moment.jpg" },
+    { "name": "Elderly man and caregiver playing cards at a wooden table, potted plants in the background, smiles and relaxed expressions, peaceful ambiance.jpg", "path": "services section/Elderly man and caregiver playing cards at a wooden table, potted plants in the background, smiles and relaxed expressions, peaceful ambiance.jpg" },
+    { "name": "Elderly woman being helped into a car by caregiver, car door open, vehicle has green logo or branding, suburban neighborhood background.jpg", "path": "services section/Elderly woman being helped into a car by caregiver, car door open, vehicle has green logo or branding, suburban neighborhood background.jpg" },
+    { "name": "Female caregiver preparing a healthy meal for an elderly man in a kitchen with green tiles and wood accents, smiling, utensils and food visible, wellness vibe.jpg", "path": "services section/Female caregiver preparing a healthy meal for an elderly man in a kitchen with green tiles and wood accents, smiling, utensils and food visible, wellness vibe.jpg" }
+  ],
+  "testimonial": [
+    { "name": "Elderly man giving a thumbs up while sitting with caregiver on a bench, trees and grass in background, warm green tones.jpg", "path": "testimonial/Elderly man giving a thumbs up while sitting with caregiver on a bench, trees and grass in background, warm green tones.jpg" },
+    { "name": "Elderly woman hugging caregiver with heartfelt smile, framed photo of her family behind, indoor plant and green curtains, warm and trusting moment.jpg", "path": "testimonial/Elderly woman hugging caregiver with heartfelt smile, framed photo of her family behind, indoor plant and green curtains, warm and trusting moment.jpg" }
+  ],
+  "service_card": [
+    { "name": "companionship.jpg", "path": "service_card/companionship.jpg" },
+    { "name": "personal_Care.jpg", "path": "service_card/personal_Care.jpg" },
+    { "name": "Supportive_Care.jpg", "path": "service_card/Supportive_Care.jpg" }
+  ]
+}

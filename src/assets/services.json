@@ -1,0 +1,71 @@
+
+{
+  "team": [
+    {
+      "name": "A diverse team of professional caregivers in coordinated blue uniforms, standing together in a home-like care facility with warm smiles.jpg",
+      "path": "new_services/A diverse team of professional caregivers in coordinated blue uniforms, standing together in a home-like care facility with warm smiles.jpg"
+    },
+    {
+      "name": "Two caregivers reviewing a care plan document on a tablet in a home office setting. blue uniform, golden tint.jpg",
+      "path": "new_services/Two caregivers reviewing a care plan document on a tablet in a home office setting. blue uniform, golden tint.jpg"
+    }
+  ],
+  "personal_care": [
+    {
+      "name": "personal_care.png",
+      "path": "new_services/personal_care.png"
+    },
+    {
+      "name": "companion_care.png",
+      "path": "new_services/companion_care.png"
+    },
+    {
+      "name": "child_care.png",
+      "path": "new_services/child_care.png"
+    }
+  ],
+  "specialized_care": [
+    {
+      "name": "Dementia & Memory Care.png",
+      "path": "new_services/Dementia & Memory Care.png"
+    },
+    {
+      "name": "Palliative-Hospice Care.png",
+      "path": "new_services/Palliative-Hospice Care.png"
+    },
+    {
+      "name": "Veteran Care.png",
+      "path": "new_services/Veteran Care.png"
+    },
+    {
+      "name": "Post‑Hospital Transitional Care.png",
+      "path": "new_services/Post‑Hospital Transitional Care.png"
+    },
+    {
+      "name": "Respite Care.png",
+      "path": "new_services/Respite Care.png"
+    }
+  ],
+  "home_support": [
+    {
+      "name": "Homemaker Services.png",
+      "path": "new_services/Homemaker Services.png"
+    }
+  ],
+  "elder_care": [
+    {
+      "name": "Senior-elder-care.png",
+      "path": "new_services/Senior-elder-care.png"
+    }
+  ],
+  "medical_services": [
+    {
+      "name": "Skilled Nursing Care.png",
+      "path": "new_services/Skilled Nursing Care.png"
+    },
+    {
+      "name": "Therapy Services.png",
+      "path": "new_services/Therapy Services.png"
+    }
+  ]
+}
