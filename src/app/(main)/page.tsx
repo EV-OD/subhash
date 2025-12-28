@@ -4,8 +4,18 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Gavel, GraduationCap, Scale, ScrollText } from 'lucide-react';
 import { practiceAreas } from '@/lib/constants';
 import { HeroIllustration } from '@/components/HeroIllustration';
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../../keystatic.config';
+import Image from 'next/image';
 
-export default function Home() {
+export default async function Home() {
+  const reader = createReader(process.cwd(), keystaticConfig);
+  const posts = (await reader.collections.posts.all({ resolveLinkedFiles: true })).sort((a, b) => {
+    const dateA = a.entry.date ? new Date(a.entry.date).getTime() : 0;
+    const dateB = b.entry.date ? new Date(b.entry.date).getTime() : 0;
+    return dateB - dateA;
+  }).slice(0, 3);
+
   return (
     <div className="flex flex-col min-h-screen">
       
@@ -33,7 +43,7 @@ export default function Home() {
                 A dedicated platform for case law analysis, legal research, and scholarly discussions. Bridging the gap between legal theory and practice in Nepal.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button asChild size="lg" className="bg-slate-900 text-white hover:bg-slate-800 font-medium">
+                <Button asChild size="lg" className="font-medium">
                   <Link href="/blog">
                     Explore Resources <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -121,74 +131,38 @@ export default function Home() {
           </div>
 
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {/* Static placeholders that mimic the blog content structure - eventually these should be dynamic */}
-            <div className="group cursor-pointer space-y-3">
-              <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden">
-                 {/* Placeholder for image */}
-                 <div className="w-full h-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
-                    <Gavel className="h-10 w-10 opacity-20" />
-                 </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
-                  Case Law
+            {posts.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group cursor-pointer space-y-3 block">
+                <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden relative">
+                   {post.entry.image ? (
+                      <Image
+                        src={post.entry.image}
+                        alt={`Featured image for ${post.entry.title}`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                   ) : (
+                     <div className="w-full h-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                        <BookOpen className="h-10 w-10 opacity-20" />
+                     </div>
+                   )}
                 </div>
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors font-serif">
-                  Understanding Recent Supreme Court Precedents
-                </h3>
-                <p className="text-muted-foreground line-clamp-3">
-                  An analysis of the latest rulings affecting constitutional rights and interpretation in Nepal.
-                </p>
-                <div className="pt-2 text-sm font-medium underline decoration-slate-300 underline-offset-4 group-hover:decoration-primary transition-all">
-                  Read Analysis
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
+                    {new Date(post.entry.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </div>
+                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors font-serif">
+                    {post.entry.title}
+                  </h3>
+                  <p className="text-muted-foreground line-clamp-3">
+                    {post.entry.excerpt}
+                  </p>
+                  <div className="pt-2 text-sm font-medium underline decoration-slate-300 underline-offset-4 group-hover:decoration-primary transition-all">
+                    Read Article
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="group cursor-pointer space-y-3">
-              <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden">
-                 <div className="w-full h-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
-                    <BookOpen className="h-10 w-10 opacity-20" />
-                 </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
-                  Research Paper
-                </div>
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors font-serif">
-                  The Evolution of Criminal Justice System
-                </h3>
-                <p className="text-muted-foreground line-clamp-3">
-                  A comparative study on the procedural changes in the criminal justice system over the last decade.
-                </p>
-                <div className="pt-2 text-sm font-medium underline decoration-slate-300 underline-offset-4 group-hover:decoration-primary transition-all">
-                  Read Paper
-                </div>
-              </div>
-            </div>
-
-            <div className="group cursor-pointer space-y-3">
-              <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 overflow-hidden">
-                 <div className="w-full h-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
-                    <GraduationCap className="h-10 w-10 opacity-20" />
-                 </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
-                  Academic Discussion
-                </div>
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors font-serif">
-                  Legal Education and Practical Challenges
-                </h3>
-                <p className="text-muted-foreground line-clamp-3">
-                  Discussing the gap between academic curriculum and the practical realities of the courtroom.
-                </p>
-                <div className="pt-2 text-sm font-medium underline decoration-slate-300 underline-offset-4 group-hover:decoration-primary transition-all">
-                  Join Discussion
-                </div>
-              </div>
-            </div>
-
+              </Link>
+            ))}
           </div>
         </div>
       </section>

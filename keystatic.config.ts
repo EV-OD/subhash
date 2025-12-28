@@ -23,6 +23,23 @@ export default config({
             directory: 'public/images/blog',
             publicPath: '/images/blog/'
         }),
+        category: fields.select({
+          label: 'Category',
+          options: [
+            { label: 'Article', value: 'article' },
+            { label: 'Research Paper', value: 'research-paper' },
+            { label: 'Academia', value: 'academia' },
+            { label: 'Case Law', value: 'case-law' },
+            { label: 'Other', value: 'other' },
+          ],
+          defaultValue: 'article',
+        }),
+        pdf: fields.file({
+          label: 'PDF Document',
+          description: 'Upload a PDF for Research Papers or Academia',
+          directory: 'public/files/posts',
+          publicPath: '/files/posts/',
+        }),
         content: fields.markdoc({ label: 'Body Content', options:{
           image:{
             directory: 'public/images/blogContentImage',

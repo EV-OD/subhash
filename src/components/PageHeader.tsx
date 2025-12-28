@@ -18,15 +18,12 @@ export function PageHeader({ tag, title, subtitle, actions, children, isCentered
     const restOfTitle = titleParts.join(' ');
     
     return (
-        <section className="w-full pt-32 pb-16 md:pt-40 md:pb-24 bg-card dotted-background overflow-hidden relative">
-            {/* <div className="absolute top-20 -left-10 w-24 h-24 border-2 border-primary/30 rounded-full"></div>
-            <div className="absolute bottom-1/4 -left-20 w-40 h-40 border-4 border-primary/10 rounded-full"></div>
-            <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-accent/30 rounded-full"></div>
-            <div className="absolute bottom-16 right-1/3 w-8 h-8 border-2 border-accent/40 rounded-full"></div>
-            <div className="absolute top-24 right-10 w-16 h-16 border-4 border-primary/20 rounded-full"></div> */}
-
+        <section className="w-full pt-32 pb-16 md:pt-40 md:pb-24 bg-slate-50 overflow-hidden relative">
+            {/* Global Grid Texture */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            
             <div className={cn(
-                "container px-4 md:px-6 grid gap-8 items-center relative",
+                "container px-4 md:px-6 grid gap-8 items-center relative z-10",
                 children ? "lg:grid-cols-2" : "grid-cols-1"
             )}>
                 <div className={cn(

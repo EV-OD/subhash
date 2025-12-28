@@ -6,7 +6,9 @@ export const SITE_NAME = 'Adv. Subhash Lamichhane';
 export const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/blog', label: 'Academic & Legal Resources' },
+  { href: '/articles', label: 'Articles' },
+  { href: '/research-papers', label: 'Research Papers' },
+  { href: '/academia', label: 'Academia' },
 ];
 
 export const companyInfo = {
@@ -50,7 +52,7 @@ export const practiceAreas = [
 ];
 
 export const cvData = {
-  profile: "Motivated and adaptable graduate with strong communication skills and a genuine interest in teaching and student development. Experienced in explaining complex ideas in a simple and practical way that supports learning at the higher secondary level. Skilled in lesson preparation, classroom engagement, and academic support. Adept at guiding students, encouraging critical thinking, and creating a positive learning environment. Comfortable working with diverse groups and contributing to school activities and academic improvement. Committed to helping students build confidence, discipline, and strong academic foundations.",
+  profile: "Licensed Advocate ranked Top 10 in the 33rd Bar Council Exam, currently pursuing an LL.M. in Criminal and Corporate Law at Nepal Law Campus. Specializes in constitutionalism, writ jurisdiction, and legal research, with a strong foundation in statutory interpretation and Supreme Court precedents. Committed to academic rigor and ethical advocacy.",
   education: [
     {
       degree: "Graduate in Law (B.A. LL.B)",
