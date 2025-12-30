@@ -72,7 +72,6 @@ export default async function ResearchPaperPage({ params }: Props) {
              <ViewCounter slug={`research-papers/${slug}`} />
           </div>
           {post.pdf && (
-          {post.pdf && (
             <Button asChild variant="outline" className="gap-2">
               <a href={post.pdf} download target="_blank" rel="noopener noreferrer">
                 <Download className="h-4 w-4" />
