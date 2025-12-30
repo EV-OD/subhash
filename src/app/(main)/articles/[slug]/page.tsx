@@ -10,6 +10,7 @@ import { User } from 'lucide-react';
 import ShareButtons from '@/components/ShareButtons';
 import { Comments } from '@/components/Comments';
 import { SITE_URL } from '@/lib/constants';
+import ViewCounter from '@/components/ViewCounter';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -81,6 +82,8 @@ export default async function ArticlePage({ params }: Props) {
                   day: 'numeric',
                 })}
              </p>
+             <span>•</span>
+             <ViewCounter slug={`articles/${slug}`} />
           </div>
         </header>
 

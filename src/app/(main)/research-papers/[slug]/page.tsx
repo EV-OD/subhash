@@ -10,6 +10,7 @@ import { EmbedPdf } from '@/components/EmbedPdf';
 import ShareButtons from '@/components/ShareButtons';
 import { Comments } from '@/components/Comments';
 import { SITE_URL } from '@/lib/constants';
+import ViewCounter from '@/components/ViewCounter';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -60,7 +61,6 @@ export default async function ResearchPaperPage({ params }: Props) {
                 <User className="h-4 w-4" />
                 <span>{post.author}</span>
              </div>
-             <span>•</span>
              <p>
                 {post.date && new Date(post.date).toLocaleDateString('en-US', {
                   year: 'numeric',
@@ -68,7 +68,10 @@ export default async function ResearchPaperPage({ params }: Props) {
                   day: 'numeric',
                 })}
              </p>
+             <span>•</span>
+             <ViewCounter slug={`research-papers/${slug}`} />
           </div>
+          {post.pdf && (
           {post.pdf && (
             <Button asChild variant="outline" className="gap-2">
               <a href={post.pdf} download target="_blank" rel="noopener noreferrer">
