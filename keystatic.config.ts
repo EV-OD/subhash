@@ -123,5 +123,15 @@ export default config({
         } }),
       },
     }),
+    legal: collection({
+      label: 'Legal Pages',
+      slugField: 'title',
+      path: 'src/content/legal/*',
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        content: fields.markdoc({ label: 'Content' }),
+      },
+    }),
   },
 });

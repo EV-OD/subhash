@@ -61,8 +61,13 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-text-description">
+        <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-description">
           <p>&copy; {year} {SITE_NAME}. All Rights Reserved.</p>
+          <div className="flex gap-4">
+            <Link href="/terms" className="hover:text-text-heading">Terms</Link>
+            <Link href="/privacy" className="hover:text-text-heading">Privacy</Link>
+            <Link href="/disclaimer" className="hover:text-text-heading">Disclaimer</Link>
+          </div>
         </div>
       </div>
     </footer>

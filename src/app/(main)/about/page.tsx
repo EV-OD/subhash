@@ -5,8 +5,8 @@ import { PageHeader } from '@/components/PageHeader';
 import { SITE_NAME, cvData } from '@/lib/constants';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { GraduationCap, Briefcase, Award, BookOpen, CheckCircle2, User, MapPin, Calendar } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { GraduationCap, Briefcase, Award, BookOpen, CheckCircle2, User, MapPin, Calendar, Linkedin, Mail } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'About Adv. Subhash Lamichhane',
@@ -47,6 +47,21 @@ export default function AboutPage() {
                 <p className="text-lg text-text-description leading-relaxed">
                   {cvData.profile}
                 </p>
+
+                <div className="flex gap-4 pt-4">
+                    <Button asChild variant="outline" size="icon">
+                        <a href="https://www.linkedin.com/in/subhash-lamichhane-539a3b183/" target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="h-5 w-5" />
+                            <span className="sr-only">LinkedIn</span>
+                        </a>
+                    </Button>
+                    <Button asChild variant="outline" size="icon">
+                        <a href="mailto:lcsubhash1@gmail.com">
+                            <Mail className="h-5 w-5" />
+                            <span className="sr-only">Email</span>
+                        </a>
+                    </Button>
+                </div>
                 
                 <div className="grid grid-cols-2 gap-4 pt-4">
                     <div className="p-4 bg-muted/50 rounded-lg border border-border">
