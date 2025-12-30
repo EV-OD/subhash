@@ -37,8 +37,8 @@ export default function MainLayout({
       <body className="font-body bg-background text-foreground antialiased">
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="light"
+            forcedTheme="light"
             disableTransitionOnChange
           >
           <Header />
