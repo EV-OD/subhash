@@ -7,6 +7,8 @@ import keystaticConfig from '../../../../../keystatic.config';
 import Markdoc from '@markdoc/markdoc';
 import React from 'react';
 import { User } from 'lucide-react';
+import ShareButtons from '@/components/ShareButtons';
+import Comments from '@/components/Comments';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -95,6 +97,9 @@ export default async function ArticlePage({ params }: Props) {
         <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-headline prose-p:text-foreground/80 prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-lg">
            {renderable ? Markdoc.renderers.react(renderable, React) : null}
         </div>
+
+        <ShareButtons title={post.title} url={`https://subhashlamichhane.com/articles/${slug}`} />
+        <Comments slug={`articles/${slug}`} title={post.title} />
       </div>
     </article>
   );

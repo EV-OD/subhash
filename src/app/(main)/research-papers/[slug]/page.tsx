@@ -7,6 +7,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, User } from 'lucide-react';
 import { EmbedPdf } from '@/components/EmbedPdf';
+import ShareButtons from '@/components/ShareButtons';
+import Comments from '@/components/Comments';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -82,6 +84,9 @@ export default async function ResearchPaperPage({ params }: Props) {
                 <EmbedPdf url={post.pdf} title={post.title} />
             </div>
         )}
+
+        <ShareButtons title={post.title} url={`https://subhashlamichhane.com/research-papers/${slug}`} />
+        <Comments slug={`research-papers/${slug}`} title={post.title} />
       </div>
     </article>
   );
