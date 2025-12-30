@@ -1,10 +1,22 @@
 
 import Link from 'next/link';
-import { companyInfo, navLinks, SITE_NAME, socialLinks } from '@/lib/constants';
+import { navLinks, SITE_NAME } from '@/lib/constants';
 import { Button } from './ui/button';
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
+import { Linkedin, Twitter, Facebook } from 'lucide-react';
 
-export function Footer() {
+const reader = createReader(process.cwd(), keystaticConfig);
+
+export async function Footer() {
   const year = new Date().getFullYear();
+  const author = await reader.singletons.author.read();
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: author?.linkedin || '#', icon: Linkedin },
+    { name: 'Twitter', href: author?.twitter || '#', icon: Twitter },
+    { name: 'Facebook', href: author?.facebook || '#', icon: Facebook },
+  ].filter(link => link.href && link.href !== '#');
 
   return (
     <footer className="bg-card border-t">
@@ -15,7 +27,7 @@ export function Footer() {
               <span className="font-bold text-lg text-primary">{SITE_NAME}</span>
             </Link>
             <p className="text-sm text-text-description">
-             {companyInfo.footerTagline}
+             {author?.tagline}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:col-span-3 gap-8">
@@ -34,15 +46,15 @@ export function Footer() {
             <div>
               <h3 className="font-headline text-sm font-semibold tracking-wider uppercase">Contact</h3>
               <ul className="mt-4 space-y-2 text-sm text-text-description">
-                <li>{companyInfo.address}</li>
+                <li>{author?.address}</li>
                 <li>
-                  <a href={`mailto:${companyInfo.email}`} className="hover:text-text-heading">
-                    {companyInfo.email}
+                  <a href={`mailto:${author?.email}`} className="hover:text-text-heading">
+                    {author?.email}
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${companyInfo.phone}`} className="hover:text-text-heading">
-                    {companyInfo.phone}
+                  <a href={`tel:${author?.phone}`} className="hover:text-text-heading">
+                    {author?.phone}
                   </a>
                 </li>
               </ul>
@@ -52,7 +64,7 @@ export function Footer() {
               <div className="mt-4 flex space-x-4">
                 {socialLinks.map((social) => (
                   <Button asChild key={social.name} variant="ghost" size="icon">
-                    <a href={social.href} aria-label={social.name}>
+                    <a href={social.href} aria-label={social.name} target="_blank" rel="noopener noreferrer">
                       <social.icon className="h-5 w-5 text-text-description hover:text-text-heading" />
                     </a>
                   </Button>
