@@ -2,6 +2,7 @@
 import { Scale, Gavel, BookOpen, Shield, Users, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Building, Home, Lightbulb, GraduationCap, FileText, ScrollText } from 'lucide-react';
 
 export const SITE_NAME = 'Adv. Subhash Lamichhane';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://subhashlamichhane.com.np';
 
 export const navLinks = [
   { href: '/', label: 'Home' },

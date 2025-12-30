@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Download, User } from 'lucide-react';
 import { EmbedPdf } from '@/components/EmbedPdf';
 import ShareButtons from '@/components/ShareButtons';
-import Comments from '@/components/Comments';
+import { Comments } from '@/components/Comments';
+import { SITE_URL } from '@/lib/constants';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -85,8 +86,17 @@ export default async function ResearchPaperPage({ params }: Props) {
             </div>
         )}
 
-        <ShareButtons title={post.title} url={`https://subhashlamichhane.com/research-papers/${slug}`} />
-        <Comments slug={`research-papers/${slug}`} title={post.title} />
+        <div className="mt-12 pt-8 border-t">
+          <ShareButtons 
+            url={`${SITE_URL}/research-papers/${slug}`} 
+            title={post.title} 
+          />
+          <Comments 
+            url={`${SITE_URL}/research-papers/${slug}`}
+            identifier={`research-paper-${slug}`}
+            title={post.title}
+          />
+        </div>
       </div>
     </article>
   );

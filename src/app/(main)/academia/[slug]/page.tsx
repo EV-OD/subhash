@@ -9,6 +9,9 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, User } from 'lucide-react';
 import { EmbedPdf } from '@/components/EmbedPdf';
+import ShareButtons from '@/components/ShareButtons';
+import { Comments } from '@/components/Comments';
+import { SITE_URL } from '@/lib/constants';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -112,6 +115,18 @@ export default async function AcademiaPostPage({ params }: Props) {
                 <EmbedPdf url={post.pdf} title={post.title} />
             </div>
         )}
+
+        <div className="mt-12 pt-8 border-t">
+          <ShareButtons 
+            url={`${SITE_URL}/academia/${slug}`} 
+            title={post.title} 
+          />
+          <Comments 
+            url={`${SITE_URL}/academia/${slug}`}
+            identifier={`academia-${slug}`}
+            title={post.title}
+          />
+        </div>
       </div>
     </article>
   );

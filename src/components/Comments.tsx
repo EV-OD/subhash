@@ -4,17 +4,18 @@ import { DiscussionEmbed } from 'disqus-react';
 import { useTheme } from 'next-themes';
 
 interface CommentsProps {
-  slug: string;
+  url: string;
+  identifier: string;
   title: string;
 }
 
-export default function Comments({ slug, title }: CommentsProps) {
+export function Comments({ url, identifier, title }: CommentsProps) {
   const { theme } = useTheme();
   const disqusShortname = 'subhash-law';
 
   const disqusConfig = {
-    url: `https://subhashlamichhane.com/${slug}`,
-    identifier: slug,
+    url: url,
+    identifier: identifier,
     title: title,
     language: 'en_US',
   };

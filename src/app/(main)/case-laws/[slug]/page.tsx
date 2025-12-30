@@ -7,6 +7,9 @@ import keystaticConfig from '../../../../../keystatic.config';
 import Markdoc from '@markdoc/markdoc';
 import React from 'react';
 import { User } from 'lucide-react';
+import ShareButtons from '@/components/ShareButtons';
+import { Comments } from '@/components/Comments';
+import { SITE_URL } from '@/lib/constants';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -95,6 +98,18 @@ export default async function CaseLawPage({ params }: Props) {
         
         <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-headline prose-p:text-foreground/80 prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-lg">
            {renderable ? Markdoc.renderers.react(renderable, React) : null}
+        </div>
+        
+        <div className="mt-12 pt-8 border-t">
+          <ShareButtons 
+            url={`${SITE_URL}/case-laws/${slug}`} 
+            title={post.title} 
+          />
+          <Comments 
+            url={`${SITE_URL}/case-laws/${slug}`}
+            identifier={`case-law-${slug}`}
+            title={post.title}
+          />
         </div>
       </div>
     </article>

@@ -8,7 +8,8 @@ import Markdoc from '@markdoc/markdoc';
 import React from 'react';
 import { User } from 'lucide-react';
 import ShareButtons from '@/components/ShareButtons';
-import Comments from '@/components/Comments';
+import { Comments } from '@/components/Comments';
+import { SITE_URL } from '@/lib/constants';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -98,8 +99,17 @@ export default async function ArticlePage({ params }: Props) {
            {renderable ? Markdoc.renderers.react(renderable, React) : null}
         </div>
 
-        <ShareButtons title={post.title} url={`https://subhashlamichhane.com/articles/${slug}`} />
-        <Comments slug={`articles/${slug}`} title={post.title} />
+        <div className="mt-12 pt-8 border-t">
+          <ShareButtons 
+            url={`${SITE_URL}/articles/${slug}`} 
+            title={post.title} 
+          />
+          <Comments 
+            url={`${SITE_URL}/articles/${slug}`}
+            identifier={`article-${slug}`}
+            title={post.title}
+          />
+        </div>
       </div>
     </article>
   );
