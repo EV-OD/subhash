@@ -11,13 +11,14 @@ import { Download, User } from 'lucide-react';
 import { EmbedPdf } from '@/components/EmbedPdf';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await reader.collections.academia.read(params.slug);
+  const { slug } = await params;
+  const post = await reader.collections.academia.read(slug);
 
   if (!post) {
     return {
@@ -39,7 +40,8 @@ export async function generateStaticParams() {
 }
 
 export default async function AcademiaPostPage({ params }: Props) {
-  const post = await reader.collections.academia.read(params.slug, { resolveLinkedFiles: true });
+  const { slug } = await params;
+  const post = await reader.collections.academia.read(slug, { resolveLinkedFiles: true });
 
   if (!post) {
     notFound();
