@@ -1,5 +1,5 @@
 // keystatic.config.ts
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
   storage: {
@@ -7,6 +7,49 @@ export default config({
   },
   cloud: {
     project: 'harmony-touch/subhash',
+  },
+  singletons: {
+    author: singleton({
+      label: 'Author Profile',
+      path: 'src/content/author/profile',
+      format: 'yaml',
+      schema: {
+        name: fields.text({ label: 'Name', defaultValue: 'Adv. Subhash Lamichhane' }),
+        tagline: fields.text({ label: 'Tagline', defaultValue: 'Advocating for Justice, Committed to Academic Excellence.' }),
+        bio: fields.text({ label: 'Bio', multiline: true }),
+        email: fields.text({ label: 'Email' }),
+        phone: fields.text({ label: 'Phone' }),
+        address: fields.text({ label: 'Address' }),
+        linkedin: fields.url({ label: 'LinkedIn URL' }),
+        twitter: fields.url({ label: 'Twitter URL' }),
+        facebook: fields.url({ label: 'Facebook URL' }),
+        profileImage: fields.image({
+          label: 'Profile Image',
+          directory: 'public/images/author',
+          publicPath: '/images/author/',
+        }),
+        education: fields.array(
+          fields.object({
+            degree: fields.text({ label: 'Degree' }),
+            year: fields.text({ label: 'Year' }),
+            institution: fields.text({ label: 'Institution' }),
+            university: fields.text({ label: 'University' }),
+          }),
+          { label: 'Education' }
+        ),
+        experience: fields.array(
+          fields.object({
+            title: fields.text({ label: 'Job Title' }),
+            organization: fields.text({ label: 'Organization' }),
+            date: fields.text({ label: 'Date Range' }),
+            description: fields.text({ label: 'Description', multiline: true }),
+          }),
+          { label: 'Experience' }
+        ),
+        achievements: fields.array(fields.text({ label: 'Achievement' }), { label: 'Achievements' }),
+        skills: fields.array(fields.text({ label: 'Skill' }), { label: 'Skills' }),
+      },
+    }),
   },
   collections: {
     articles: collection({

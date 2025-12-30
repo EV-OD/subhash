@@ -20,7 +20,7 @@ export const companyInfo = {
 };
 
 export const socialLinks = [
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/subhash-lamichhane-5b1b3b1b3/', icon: Linkedin },
   { name: 'Twitter', href: '#', icon: Twitter },
   { name: 'Facebook', href: '#', icon: Facebook },
 ];

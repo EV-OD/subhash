@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { companyInfo } from '@/lib/constants';
 
 export function CtaSection() {
   return (
@@ -20,7 +21,7 @@ export function CtaSection() {
               <Link href="/contact">Contact Us Now</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-              <Link href="tel:+15551234567">Call (555) 123-4567</Link>
+              <Link href={`tel:${companyInfo.phone.split(',')[0].trim()}`}>Call {companyInfo.phone.split(',')[0].trim()}</Link>
             </Button>
           </div>
         </div>
