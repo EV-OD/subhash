@@ -4,8 +4,7 @@ import type { Metadata } from 'next';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../../../keystatic.config';
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Download, User } from 'lucide-react';
+import { User } from 'lucide-react';
 import { EmbedPdf } from '@/components/EmbedPdf';
 import ShareButtons from '@/components/ShareButtons';
 import { Comments } from '@/components/Comments';
@@ -71,14 +70,6 @@ export default async function ResearchPaperPage({ params }: Props) {
              <span>•</span>
              <ViewCounter slug={`research-papers/${slug}`} />
           </div>
-          {post.pdf && (
-            <Button asChild variant="outline" className="gap-2">
-              <a href={post.pdf} download target="_blank" rel="noopener noreferrer">
-                <Download className="h-4 w-4" />
-                Download PDF
-              </a>
-            </Button>
-          )}
         </header>
 
         {post.pdf && (

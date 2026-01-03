@@ -1,5 +1,8 @@
 
+'use client';
+
 import React from 'react';
+import { PDFViewer } from '@embedpdf/react-pdf-viewer';
 
 interface EmbedPdfProps {
   url: string;
@@ -9,12 +12,14 @@ interface EmbedPdfProps {
 
 export function EmbedPdf({ url, title = "PDF Document", className = "" }: EmbedPdfProps) {
   return (
-    <div className={`w-full h-[800px] border rounded-lg overflow-hidden bg-muted ${className}`}>
-      <iframe
-        src={url}
-        title={title}
-        className="w-full h-full"
-        style={{ border: 'none' }}
+    <div className={`h-[800px] border rounded-lg ${className}`}>
+      <PDFViewer 
+      className='h-full'
+        config={{
+          src: url,
+          theme: { preference: 'light' },
+          disabledCategories: ['document-print', 'document-export']
+        }}
       />
     </div>
   );

@@ -81,7 +81,7 @@ export default function ContactPage() {
             </div>
             <div className="aspect-video w-full">
                <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.30043867623!2d-75.28028318260447!3d39.98265887645163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b7d8d4b54331%3A0x6491cdf34f0a0501!2sPhiladelphia%2C%20PA!5e0!3m2!1sen!2sus!4v1620000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31625951288!2d85.29111324156185!3d27.667478799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d3cf18ca51%3A0xd10ec3d53656e18f!2sLalitpur!5e0!3m2!1sen!2snp!4v1704180000000!5m2!1sen!2snp"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
