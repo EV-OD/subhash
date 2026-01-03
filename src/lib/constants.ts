@@ -11,6 +11,7 @@ export const navLinks = [
   { href: '/research-papers', label: 'Research Papers' },
   { href: '/academia', label: 'Academia' },
   { href: '/case-laws', label: 'Case Laws' },
+  { href: '/videos', label: 'Videos' },
 ];
 
 export const companyInfo = {

@@ -181,5 +181,24 @@ export default config({
         content: fields.markdoc({ label: 'Content' }),
       },
     }),
+    videos: collection({
+      label: 'Videos',
+      slugField: 'title',
+      path: 'src/content/videos/*',
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        description: fields.text({ label: 'Description', multiline: true }),
+        youtubeUrl: fields.url({ label: 'YouTube URL' }),
+        date: fields.date({ label: 'Publish Date', defaultValue: new Date().toISOString().split('T')[0] }),
+        thumbnail: fields.image({
+          label: 'Thumbnail (Optional)',
+          description: 'If not provided, will try to use YouTube thumbnail',
+          directory: 'public/images/videos',
+          publicPath: '/images/videos/',
+        }),
+        content: fields.markdoc({ label: 'Additional Content' }),
+      },
+    }),
   },
 });
