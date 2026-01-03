@@ -57,11 +57,6 @@ export default async function VideosPage() {
                             <ContentHeroImage title={video.entry.title} />
                         )}
                         
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                            <div className="h-12 w-12 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                                <PlayCircle className="h-6 w-6 text-primary fill-current" />
-                            </div>
-                        </div>
                     </div>
                     <div className="space-y-2 flex-1">
                         <div className="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">

@@ -6,6 +6,12 @@ import ViewCounter from '@/components/ViewCounter';
 import ShareButtons from '@/components/ShareButtons';
 import { SITE_URL } from '@/lib/constants';
 
+export async function generateStaticParams() {
+  const reader = createReader(process.cwd(), keystaticConfig);
+  const videos = await reader.collections.videos.all();
+  return videos.map((video) => ({ slug: video.slug }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const reader = createReader(process.cwd(), keystaticConfig);
