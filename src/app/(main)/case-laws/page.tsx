@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../../keystatic.config';
+import { ContentHeroImage } from '@/components/ContentHeroImage';
 
 export const metadata: Metadata = {
   title: 'Case Laws',
@@ -35,16 +36,13 @@ export default async function CaseLawsPage() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
               {posts.map((post) => (
                 <Card key={post.slug} className="flex flex-col">
-                   {post.entry.image && (
                     <Link href={`/case-laws/${post.slug}`} className="hidden lg:block relative w-full aspect-video">
-                      <Image
+                      <ContentHeroImage
                         src={post.entry.image}
-                        alt={`Featured image for ${post.entry.title}`}
-                        fill
-                        className="object-cover rounded-t-lg"
+                        title={post.entry.title}
+                        className="rounded-t-lg rounded-b-none"
                       />
                     </Link>
-                  )}
                   <div className="flex flex-col flex-1">
                     <CardHeader>
                       <CardTitle className="font-headline text-lg lg:text-2xl leading-tight">

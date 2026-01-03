@@ -3,10 +3,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../../keystatic.config';
+import { ContentHeroImage } from '@/components/ContentHeroImage';
 
 export const metadata: Metadata = {
   title: 'Academia',
@@ -35,16 +36,13 @@ export default async function AcademiaPage() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
               {posts.map((post) => (
                 <Card key={post.slug} className="flex flex-col">
-                   {post.entry.image && (
                     <Link href={`/academia/${post.slug}`} className="hidden lg:block relative w-full aspect-video">
-                      <Image
+                      <ContentHeroImage
                         src={post.entry.image}
-                        alt={`Featured image for ${post.entry.title}`}
-                        fill
-                        className="object-cover rounded-t-lg"
+                        title={post.entry.title}
+                        className="rounded-t-lg rounded-b-none"
                       />
                     </Link>
-                  )}
                   <div className="flex flex-col flex-1">
                     <CardHeader>
                       <CardTitle className="font-headline text-lg lg:text-2xl leading-tight">
@@ -70,14 +68,6 @@ export default async function AcademiaPage() {
                             View Resource <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>
-                        {post.entry.pdf && (
-                          <Button asChild variant="outline" size="sm" className="ml-auto">
-                            <a href={post.entry.pdf} download target="_blank" rel="noopener noreferrer">
-                              <Download className="mr-2 h-4 w-4" />
-                              Download PDF
-                            </a>
-                          </Button>
-                        )}
                       </div>
                     </CardContent>
                   </div>

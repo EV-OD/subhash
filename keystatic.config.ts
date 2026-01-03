@@ -85,6 +85,11 @@ export default config({
         author: fields.text({ label: 'Author', defaultValue: 'Subhash Lamichhane' }),
         excerpt: fields.text({ label: 'Abstract/Excerpt', multiline: true }),
         date: fields.date({ label: 'Publish Date', defaultValue: new Date().toISOString().split('T')[0] }),
+        image: fields.image({
+          label: 'Hero Image',
+          directory: 'public/images/research-papers',
+          publicPath: '/images/research-papers/',
+        }),
         pdf: fields.file({
           label: 'PDF Document',
           directory: 'public/files/research-papers',

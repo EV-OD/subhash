@@ -7,6 +7,7 @@ import { HeroIllustration } from '@/components/HeroIllustration';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../keystatic.config';
 import Image from 'next/image';
+import { ContentHeroImage } from '@/components/ContentHeroImage';
 
 export default async function Home() {
   const reader = createReader(process.cwd(), keystaticConfig);
@@ -146,20 +147,11 @@ export default async function Home() {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {allContent.map((post) => (
               <Link key={post.slug} href={`/${post.type}/${post.slug}`} className="group cursor-pointer space-y-3 block">
-                <div className="aspect-video bg-muted dark:bg-muted/20 rounded-lg mb-4 overflow-hidden relative">
-                   {post.entry.image ? (
-                      <Image
-                        src={post.entry.image}
-                        alt={`Featured image for ${post.entry.title}`}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                   ) : (
-                     <div className="w-full h-full bg-muted dark:bg-muted/20 flex items-center justify-center text-muted-foreground">
-                        <BookOpen className="h-10 w-10 opacity-20" />
-                     </div>
-                   )}
-                </div>
+                <ContentHeroImage 
+                  src={post.entry.image} 
+                  title={post.entry.title} 
+                  className="mb-4"
+                />
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
                     {new Date(post.entry.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}

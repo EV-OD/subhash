@@ -7,6 +7,7 @@ import keystaticConfig from '../../../../keystatic.config';
 import { PageHeader } from '@/components/PageHeader';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen } from 'lucide-react';
+import { ContentHeroImage } from '@/components/ContentHeroImage';
 
 export const metadata = {
   title: 'Archive - Adv. Subhash Lamichhane',
@@ -45,20 +46,13 @@ export default async function BlogPage() {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {allContent.map((post) => (
               <Link key={post.slug} href={`/${post.type}/${post.slug}`} className="group cursor-pointer space-y-3 block h-full flex flex-col">
-                <div className="aspect-video bg-muted dark:bg-muted/20 rounded-lg mb-4 overflow-hidden relative border border-border">
-                   {post.entry.image ? (
-                      <Image
-                        src={post.entry.image}
-                        alt={`Featured image for ${post.entry.title}`}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                   ) : (
-                     <div className="w-full h-full bg-muted dark:bg-muted/20 flex items-center justify-center text-muted-foreground">
-                        <BookOpen className="h-10 w-10 opacity-20" />
-                     </div>
-                   )}
-                   <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium border border-border">
+                <div className="relative mb-4">
+                  <ContentHeroImage 
+                    src={post.entry.image} 
+                    title={post.entry.title} 
+                    className="mb-0 border border-border"
+                  />
+                   <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium border border-border z-10">
                       {post.label}
                    </div>
                 </div>
