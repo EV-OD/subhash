@@ -1,10 +1,9 @@
 // app/sitemap.xml/route.ts
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../keystatic.config';
-import { navLinks } from '@/lib/constants';
+import { navLinks, SITE_URL } from '@/lib/constants';
 
 const reader = createReader(process.cwd(), keystaticConfig);
-const URL = "https://www.harmonytouch.com";
 
 function generateSiteMap(urls: string[]) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -14,6 +13,8 @@ function generateSiteMap(urls: string[]) {
          return `
            <url>
                <loc>${url}</loc>
+               <changefreq>weekly</changefreq>
+               <priority>0.7</priority>
            </url>
          `;
        })
@@ -28,15 +29,24 @@ export async function GET() {
   const researchPaperSlugs = await reader.collections.researchPapers.list();
   const academiaSlugs = await reader.collections.academia.list();
   const caseLawSlugs = await reader.collections.caseLaws.list();
+  const videoSlugs = await reader.collections.videos.list();
+  const legalSlugs = await reader.collections.legal.list();
 
   // Generate URLs for static pages
-  const staticUrls = navLinks.map((link) => `${URL}${link.href === '/' ? '' : link.href}`);
+  const staticUrls = navLinks.map((link) => `${SITE_URL}${link.href === '/' ? '' : link.href}`);
+  
+  // Add blog page if not in navLinks
+  if (!navLinks.find(link => link.href === '/blog')) {
+      staticUrls.push(`${SITE_URL}/blog`);
+  }
 
   // Generate URLs for dynamic content
-  const articleUrls = articleSlugs.map((slug) => `${URL}/articles/${slug}`);
-  const researchPaperUrls = researchPaperSlugs.map((slug) => `${URL}/research-papers/${slug}`);
-  const academiaUrls = academiaSlugs.map((slug) => `${URL}/academia/${slug}`);
-  const caseLawUrls = caseLawSlugs.map((slug) => `${URL}/case-laws/${slug}`);
+  const articleUrls = articleSlugs.map((slug) => `${SITE_URL}/articles/${slug}`);
+  const researchPaperUrls = researchPaperSlugs.map((slug) => `${SITE_URL}/research-papers/${slug}`);
+  const academiaUrls = academiaSlugs.map((slug) => `${SITE_URL}/academia/${slug}`);
+  const caseLawUrls = caseLawSlugs.map((slug) => `${SITE_URL}/case-laws/${slug}`);
+  const videoUrls = videoSlugs.map((slug) => `${SITE_URL}/videos/${slug}`);
+  const legalUrls = legalSlugs.map((slug) => `${SITE_URL}/legal/${slug}`);
 
   const allUrls = [
     ...staticUrls,
@@ -44,6 +54,8 @@ export async function GET() {
     ...researchPaperUrls,
     ...academiaUrls,
     ...caseLawUrls,
+    ...videoUrls,
+    ...legalUrls,
   ];
 
   const body = generateSiteMap(allUrls);

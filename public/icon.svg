@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#1e293b"/>
+  
+  <!-- Central Pole -->
+  <rect x="243" y="64" width="26" height="400" fill="#e2e8f0"/>
+  
+  <!-- Base -->
+  <rect x="170" y="438" width="172" height="26" fill="#e2e8f0"/>
+  
+  <!-- Cross Beam -->
+  <rect x="102" y="115" width="308" height="20" fill="#e2e8f0"/>
+  
+  <!-- Left Pan -->
+  <line x1="140" y1="135" x2="100" y2="235" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="140" y1="135" x2="180" y2="235" stroke="#fbbf24" stroke-width="3"/>
+  <path d="M 100 235 A 40 40 0 0 0 180 235 Z" fill="#fbbf24"/>
+  
+  <!-- Right Pan -->
+  <line x1="372" y1="135" x2="332" y2="235" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="372" y1="135" x2="412" y2="235" stroke="#fbbf24" stroke-width="3"/>
+  <path d="M 332 235 A 40 40 0 0 0 412 235 Z" fill="#fbbf24"/>
+</svg>
