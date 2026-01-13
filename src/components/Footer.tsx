@@ -4,7 +4,7 @@ import { navLinks, SITE_NAME } from '@/lib/constants';
 import { Button } from './ui/button';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../keystatic.config';
-import { Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Mail } from 'lucide-react';
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -79,6 +79,42 @@ export async function Footer() {
             <Link href="/terms" className="hover:text-text-heading">Terms</Link>
             <Link href="/privacy" className="hover:text-text-heading">Privacy</Link>
             <Link href="/disclaimer" className="hover:text-text-heading">Disclaimer</Link>
+          </div>
+        </div>
+        
+        <div className="mt-4 pt-4 border-t border-border/40 flex flex-col sm:flex-row justify-center items-center gap-4 text-xs text-text-description">
+          <div className="flex items-center gap-1">
+            <span>Made by</span>
+            <a 
+              href="https://lamichhanerabin.com.np/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-medium hover:text-text-heading underline underline-offset-2"
+            >
+              Rabin Lamichhane
+            </a>
+          </div>
+          
+          <div className="flex items-center gap-4">
+             <a 
+               href="mailto:evod@gmail.com" 
+               className="flex items-center gap-1 hover:text-text-heading transition-colors"
+               aria-label="Email Developer"
+             >
+               <Mail className="h-3 w-3" />
+               <span>evod@gmail.com</span>
+             </a>
+             
+             <a 
+               href="https://www.linkedin.com/in/rabinlc01/" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="flex items-center gap-1 hover:text-text-heading transition-colors"
+               aria-label="Developer LinkedIn"
+             >
+               <Linkedin className="h-3 w-3" />
+               <span>LinkedIn</span>
+             </a>
           </div>
         </div>
       </div>
