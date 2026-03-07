@@ -4,7 +4,7 @@ A comprehensive professional portfolio and legal resource platform for **Adv. Su
 
 This website serves as a hub for legal professionals, students, and the general public to access legal articles, research papers, case laws, and academic resources focused on Nepali and International Law.
 
-## 🚀 Key Features
+## Key Features
 
 - **Legal Articles & Research Papers:** In-depth analysis of constitutional doctrines, election processes, and statutory frameworks (e.g., Human Trafficking and Transportation (Control) Act).
 - **Case Law Database:** Curated selection of significant case laws and legal precedents.
