@@ -23,6 +23,7 @@ email: lcsubhash1@gmail.com
 phone: '9811227216'
 address: Lalitpur, Patan
 linkedin: https://www.linkedin.com/in/subhash-lamichhane/
+profileImage: /images/author/profileImage.JPG
 education:
   - degree: BALLB
     year: '2024'
@@ -31,6 +32,10 @@ education:
     year: '2026'
     institution: Nepal Law Campus
     university: Tribhuwan University
+  - degree: BALLB
+    year: '2024'
+    institution: Bright Vision Law College
+    university: Purbanchal University
 experience: []
 achievements:
   - TOP 10 ranked in 33rd Bar Council  License examination
