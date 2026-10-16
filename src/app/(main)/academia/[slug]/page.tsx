@@ -9,7 +9,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, User } from 'lucide-react';
 import { EmbedPdf } from '@/components/EmbedPdf';
-import { ShareButtons } from '@/components/ShareButtons';
+import ShareButtons from '@/components/ShareButtons';
 import { Comments } from '@/components/Comments';
 import { SITE_URL } from '@/lib/constants';
 import { ContentHeroImage } from '@/components/ContentHeroImage';
