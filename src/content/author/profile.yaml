@@ -36,7 +36,28 @@ education:
     year: '2024'
     institution: Bright Vision Law College
     university: Purbanchal University
-experience: []
+experience:
+  - title: Legal Associates
+    organization: ' Lawyers and Lawyers Associates Nepal'
+    date: August 2026 – October 2026
+    description: >
+      Assisted in criminal , civil case and writ preparation, legal research,
+      and drafting of Court documents and legal opinions.
+  - title: Legal Intern
+    organization: Kathmandu District Attorney’s Office
+    date: March 2026 – May 2026
+    description: "•\tAssisted in criminal case preparation, legal research, and drafting of charge sheets and legal opinions. \n•\tSupported prosecutors during court proceedings, case file management, and evidence review. \n•\tConducted statutory interpretation and case file analysis. \n"
+  - title: Legal Intern, Morang Bar Association
+    date: March 2024 – June 2024
+    description: "•\tAssisted in legal documentation, court procedures, and legal drafting. \n•\tGained experience in government legal processes and court functioning. \n"
+  - title: "\tInternational Law Students Association (ILSA) – Jessup International Moot Court Competition"
+    date: Kathmandu, Nepal | September 2023 – October 2023
+    description: "•\tParticipated in a moot court competition focused on public international law. \n•\tConducted legal research, prepared memorials, and practiced oral advocacy. \n"
+  - title: '6-hour Contract Drafting Training '
+    organization: Certificate by Gyanpunj School Of Leadership
+  - title: Advocate License
+    organization: Nepal Bar Council
+    date: '2025'
 achievements:
   - TOP 10 ranked in 33rd Bar Council  License examination
 skills: []
